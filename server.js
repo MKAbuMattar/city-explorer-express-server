@@ -2,8 +2,8 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 //components
-const handelWeather = require('./components/weather/weather');
-const handelMovie = require('./components/movie/movie');
+const handelWeather = require('./modules/weather/weather');
+const handelMovie = require('./modules/movie/movie');
 //env
 const PORT = process.env.PORT;
 
