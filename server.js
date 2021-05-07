@@ -1,9 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
-//components
+//modules
 const handelWeather = require('./modules/weather/weather');
 const handelMovie = require('./modules/movie/movie');
+const handelRestaurant = require('./modules/Restaurant/Restaurant');
 //env
 const PORT = process.env.PORT;
 
@@ -17,5 +18,7 @@ app.get('/', (req, res) => {
 app.get('/weather', handelWeather);
 
 app.get('/movie', handelMovie);
+
+app.get('/restaurant', handelRestaurant);
 
 app.listen(PORT);

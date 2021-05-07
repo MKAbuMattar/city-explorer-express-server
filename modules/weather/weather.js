@@ -28,7 +28,7 @@ const handelWeather = (req, res) => {
       lat: req.query.lat,
       lon: req.query.lon
     };
-    const key = 'weather-' + req.query.lat + req.query.lon;
+    const key = `weather-${req.query.lat}${req.query.lon}`;
     if (inCache[key] && (Date.now() - inCache[key].timestamp < (60 * 60 * 1000))) {
       res.send(inCache[key]);
     } else {

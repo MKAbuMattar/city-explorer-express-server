@@ -24,7 +24,7 @@ const handelMovie = (req, res) => {
       query: req.query.city,
       limit: 10
     };
-    const key = 'movie-' + req.query.city;
+    const key = `movie-${req.query.city}`;
     if (inCache[key] && (Date.now() - inCache[key].timestamp < (60 * 60 * 1000))) {
       res.send(inCache[key]);
     } else {
