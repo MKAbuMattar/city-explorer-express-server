@@ -4,7 +4,7 @@ require('dotenv').config();
 //modules
 const handelWeather = require('./modules/weather/weather');
 const handelMovie = require('./modules/movie/movie');
-const handelRestaurant = require('./modules/Restaurant/Restaurant');
+const handelRestaurant = require('./modules/restaurant/restaurant');
 //env
 const PORT = process.env.PORT;
 
