@@ -26,7 +26,7 @@ const handelRestaurant = (req, res) => {
       location: req.query.location,
       limit: '10',
     };
-    const key = `movie-${req.query.location}`;
+    const key = `restaurant-${req.query.location}`;
     if (inCache[key] && (Date.now() - inCache[key].timestamp < (60 * 60 * 1000))) {
       res.send(inCache[key]);
     } else {
